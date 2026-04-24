@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Electronics shop</title>
+    <link rel="stylesheet" href="E_style.css">
+</head>
+<body>
+    <div class ="Login">
+        <h2>login</h2>
+        <form id ="loginForm">
+            <div class ="input-group">
+                <label>Email:</label>
+                <input type="email" id="email" name="email" required placeholder=".@gmail.com" title="يرجى إدخال بريد إلكتروني ينتهي بـ @gmail.com"><br><br>
+                
+                <label>Password:</label>
+                <input type="password" id="password" name="password" required minlength="8" 
+                    placeholder="على الأقل 8 رموز"/><br><br>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Remember me</label><br><br>
+            </div>
+
+            </div>
+            <button type="submit" id="Login-button">  Login </button>
+
+            <div class="forgot-password">
+                <a href="forgot-password.html" style="text-decoration: none; color: blue;">Forgot Password?</a>
+            </div>
+
+            <div class="register-container">
+                <p>Don't have an account? <a href="register.html" style="text-decoration: none; color: blue;">Register here</a></p>
+            </div>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src ="E_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+body{
+    background-color:linear-gradient(to bottom, #cedff1 0%, #edf3f9 100%);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+    margin:0;
+    padding: 0 ;
+}
+.Login{
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    width: 400px;
+}
+
+.div{
+    height: 1px;
+    background-color: #eee;
+    margin-bottom:32px;
+}
+
+.Login-card h2{
+    text-align: center;
+    margin-bottom: 16px;
+    color: #555;
+    font-size: 28px;
+}
+
+.login-group{
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.input-group input{
+    width: 100%;
+    padding:12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    color:#444;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.input-group input::placeholder{
+    color: #ccc;
+}
+
+.checkbox-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    margin-bottom: 15px;
+    font-size:20px;
+}
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #007bff;
+}
+
+.Login_button{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 14px ;
+    background-color: #4a90e2;
+    color: white;
+    border:none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+ .Login_button:hover{
+    background-color: #357abd;
+}
+
+.forgot-password{
+    text-align: right;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forget-password a{
+    color:#888;
+    text-decoration: none;
+    font-size:14px;
+}
+
+.forget-password a:hover{
+    color:#4a90e2;
+}
+
+.register-container {
+    text-align: center;
+    margin-top: 16px;
+    color: #777;
+    font-size: 14px;
+}
+
+.register-container a {
+    color: #4a90e2; /* لون أزرق */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-container a:hover {
+    text-decoration: underline; /* خط تحت الكلمة عند الوقوف */
+}
+
+
+.message{
+    text-align: center;
+    margin-top: 15px;
+    color: red;
+    font-size: 14px;
+}
+
