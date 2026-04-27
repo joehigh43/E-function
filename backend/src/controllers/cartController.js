@@ -29,3 +29,16 @@ exports.getCart = (req, res) => {
     res.json(result);
   });
 };
+
+exports.deleteItem = (req, res) => {
+  const { CartID, ProductID } = req.body;
+
+  db.query(
+    'DELETE FROM CartItems WHERE CartID = ? AND ProductID = ?',
+    [CartID, ProductID],
+    (err) => {
+      if (err) return res.status(500).send(err);
+      res.send("Deleted");
+    }
+  );
+};

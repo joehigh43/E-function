@@ -63,3 +63,9 @@ create table cartItems (
     Quantity INt
 );
 select * from cartItems;
+
+SELECT Products.productName, Products.Price, CartItems.Quantity, Products.ProductID
+FROM CartItems
+JOIN Carts ON CartItems.CartID = Carts.CartID
+JOIN Products ON CartItems.ProductID = Products.ProductID
+WHERE Carts.customerID = 'test@test.com';
