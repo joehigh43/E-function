@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | TechStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+                  <button class="menu-toggle" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <aside class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+        </div>
+
+        <div class="products-header">
+            <div class="header-top">
+                <h1 class="title">Our Products</h1>
+                <!-- Dynamic count badge — filled by JS -->
+                <span class="products-count-badge" id="products-count"></span>
+            </div>
+
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" class="search-input" placeholder="Search for products...">
+            </div>
+
+            <div class="category-filters" id="category-filters">
+                <!-- Category buttons generated dynamically from DB data -->
+            </div>
+        </div>
+
+        <!-- Products grid — entirely filled by JavaScript -->
+        <main class="products-grid" id="products-grid">
+            <!-- Skeleton placeholders shown while "loading" -->
+        </main>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         PRODUCT DETAIL MODAL
+    ══════════════════════════════════════════════ -->
+    <div class="modal-backdrop" id="modal-backdrop">
+        <div class="modal" id="product-modal" role="dialog" aria-modal="true">
+
+            <button class="modal-close" id="modal-close" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-inner">
+                <!-- Left: image gallery -->
+                <div class="modal-gallery">
+                    <div class="modal-img-main">
+                        <span class="modal-badge" id="modal-badge"></span>
+                        <img id="modal-main-img" src="" alt="" />
+                    </div>
+                </div>
+
+                <!-- Right: details -->
+                <div class="modal-details">
+                    <div class="modal-category" id="modal-category"></div>
+                    <h2 class="modal-title" id="modal-title"></h2>
+
+                    <div class="modal-rating" id="modal-rating"></div>
+
+                    <div class="modal-price-row">
+                        <span class="modal-price" id="modal-price"></span>
+                        <span class="modal-original-price" id="modal-original-price"></span>
+                    </div>
+
+                    <p class="modal-description" id="modal-description"></p>
+
+                    <!-- Specs list -->
+                    <ul class="modal-specs" id="modal-specs"></ul>
+
+                    <!-- Actions -->
+                    <div class="modal-actions">
+                        <div class="quantity">
+                            <button class="qty-btn" id="modal-decrease">−</button>
+                            <input type="number" class="qty-input" id="modal-qty" value="1" min="1" max="99" readonly>
+                            <button class="qty-btn" id="modal-increase">+</button>
+                        </div>
+                        <button class="modal-add-cart" id="modal-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="modal-wishlist" id="modal-wishlist" aria-label="Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Floating Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span>Product added to your cart!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

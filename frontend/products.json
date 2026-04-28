@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Aura Pro Noise-Cancelling Headphones",
+    "category": "headphones",
+    "price": 299.99,
+    "originalPrice": null,
+    "badge": "New",
+    "badgeType": "new",
+    "rating": 4.5,
+    "reviewCount": 1245,
+    "description": "Experience audio perfection with the Aura Pro. Featuring ANC and 40-hour battery life.",
+    "specs": [
+      "40-hour battery life",
+      "Active Noise Cancellation",
+      "Bluetooth 5.3"
+    ],
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.0KZVRLQGYZZeXI906VlAmwHaD4?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "id": 2,
+    "name": "Aura Lite Headphones",
+    "category": "headphones",
+    "price": 149.00,
+    "originalPrice": 186.00,
+    "badge": "-20%",
+    "badgeType": "sale",
+    "rating": 4.0,
+    "reviewCount": 412,
+    "description": "Lightweight headphones with balanced sound.",
+    "specs": [
+      "25-hour battery",
+      "Bluetooth 5.1",
+      "Foldable"
+    ],
+    "image_url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b80cd9f3-3e90-4b55-87cb-38407461491f.__CR0,0,1464,600_PT0_SX1464_V1___.png"
+  },
+  {
+    "id": 3,
+    "name": "Aura Pods Pro",
+    "category": "earbuds",
+    "price": 199.00,
+    "originalPrice": null,
+    "badge": null,
+    "badgeType": null,
+    "rating": 4.5,
+    "reviewCount": 890,
+    "description": "True wireless earbuds with ANC.",
+    "specs": [
+      "8hr + 32hr case",
+      "Wireless charging",
+      "IPX5"
+    ],
+    "image_url": "https://i.ytimg.com/vi/ytncIULNHOI/hq720.jpg?sqp=-oaymwEkCJUDENAFSFryq4qpAxYIARUAAAAAJQAAyEI9AICiQ3gB0AEB&rs=AOn4CLBddvn0mB4uiHb_bVkQwjCfAdhgMQ"
+  },
+  {
+    "id": 4,
+    "name": "Premium Aluminum Stand",
+    "category": "accessories",
+    "price": 45.00,
+    "originalPrice": null,
+    "badge": null,
+    "badgeType": null,
+    "rating": 5.0,
+    "reviewCount": 120,
+    "description": "Strong aluminum stand for headphones.",
+    "specs": [
+      "Aluminum",
+      "Non-slip",
+      "Universal fit"
+    ],
+    "image_url": "https://app.hsstore.com/images/thumbs/0061467_smart-premium-aluminum-laptop-stand-grey.jpeg"
+  }
+]

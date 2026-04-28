@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary:  #0f172a;
+  --accent:   #3b82f6;
+  --success:  #10b981;
+  --danger:   #ef4444;
+  --warning:  #f59e0b;
+  --bg:       #f8fafc;
+  --surface:  #ffffff;
+  --border:   #e2e8f0;
+  --text:     #1e293b;
+  --muted:    #64748b;
+  --radius:   12px;
+  --shadow:   0 4px 20px rgba(0,0,0,0.07);
+  --transition: all 0.25s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.cart-header {
+  background: var(--primary);
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.cart-header .inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.back-link {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+.back-link:hover { color: white; }
+
+/* ── Container ───────────────────────────────────────────── */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* ── Cart Item ───────────────────────────────────────────── */
+.cart-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  animation: slideIn 0.3s ease both;
+}
+.cart-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 24px rgba(59,130,246,0.1);
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.item-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.item-price {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.item-price strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ── Item Controls ───────────────────────────────────────── */
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-qty {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  line-height: 1;
+}
+.btn-qty.add    { border-color: var(--success); color: var(--success); }
+.btn-qty.remove { border-color: var(--warning); color: var(--warning); }
+.btn-qty.delete { border-color: var(--danger);  color: var(--danger);  }
+.btn-qty:hover  { transform: scale(1.1); }
+
+.qty-display {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* ── Total ───────────────────────────────────────────────── */
+#total {
+  text-align: right;
+  font-size: 1.3rem;
+  color: var(--text);
+  padding: 20px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 8px;
+  box-shadow: var(--shadow);
+}
+#total strong {
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+/* ── Empty Cart ──────────────────────────────────────────── */
+.empty-cart {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border);
+}
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+}
+.empty-cart h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+.empty-cart p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.btn-shop {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn-shop:hover { background: #2563eb; transform: translateY(-1px); }
+
+/* ── Loading / Error ─────────────────────────────────────── */
+.loading-msg {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-msg {
+  text-align: center;
+  padding: 30px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius);
+  color: var(--danger);
+  line-height: 1.8;
+}
+.btn-retry {
+  margin-top: 12px;
+  padding: 8px 20px;
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn-retry:hover { opacity: 0.85; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 520px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item-controls { width: 100%; justify-content: flex-end; }
+}
+
+/* Styling the Hamburger Icon */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10; /* Keeps it above the sidebar */
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.sidebar a{
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    color: gray;
+    transition: all 0.3s linear;
+    text-decoration: none;
+}
+
+/* Sidebar - Hidden by default */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  padding-top: 60px; /* Give space so the 'X' doesn't overlap links */
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  z-index: 100;
+}
+
+/* When this class is added via JavaScript, the sidebar slides in */
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* Styling the 'X' button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #ff4757; /* A little red tint on hover looks sharp */
+}
